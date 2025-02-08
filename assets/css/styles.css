@@ -13,25 +13,11 @@
 :root {
   --main-color: #0a1128;
   --white-color: #ffffff;
+  --gray-light-color: #eeeeee;
   --gap: 3rem;
+  --montserrat: 'Montserrat', serif;
+  --open-sans: 'Open Sans', serif;
 }
-
-/* 
-.montserrat-<uniquifier> {
-  font-family: "Montserrat", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-.open-sans-<uniquifier> {
-  font-family: "Open Sans", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-*/
 
 /************************/
 /**** HTML ****/
@@ -41,7 +27,7 @@ html {
 }
 
 /************************/
-/**** BODY ****/
+/**** MAIN TAGS ****/
 /************************/
 body {
   font-family: 'Open Sans', serif;
@@ -54,6 +40,9 @@ h4,
 h5,
 h6 {
   font-family: 'Montserrat', serif;
+}
+a {
+  text-decoration: none;
 }
 
 /************************/
@@ -69,10 +58,65 @@ h6 {
   background-color: var(--white-color);
 }
 .main-content {
-  max-width: 1200px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: var(--gap);
 }
 .section {
   min-height: 100vh;
+}
+
+/************************/
+/**** HEADER ****/
+/************************/
+#header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-bottom: solid 0.1rem var(--gray-light-color);
+}
+#header-navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+#header-logoContainer {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+#header-logo {
+  color: var(--main-color);
+}
+#header-navList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+.header-navLinks {
+  display: block;
+  padding: 2rem;
+  font-size: 1.4rem;
+  color: var(--main-color);
+  position: relative;
+}
+.header-navLinks::after {
+  content: '';
+  position: absolute;
+  background-color: var(--main-color);
+  bottom: 1rem;
+  left: 50%;
+  width: 0;
+  height: 0.2rem;
+  transition: all 300ms ease-in-out;
+}
+.header-navLinks:hover::after {
+  width: 50%;
+  left: 25%;
 }
