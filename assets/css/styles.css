@@ -1,0 +1,78 @@
+/************************/
+/**** BASIC RESET ****/
+/************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/************************/
+/**** ROOT ****/
+/************************/
+:root {
+  --main-color: #0a1128;
+  --white-color: #ffffff;
+  --gap: 3rem;
+}
+
+/* 
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.open-sans-<uniquifier> {
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+*/
+
+/************************/
+/**** HTML ****/
+/************************/
+html {
+  font-size: 62.5%;
+}
+
+/************************/
+/**** BODY ****/
+/************************/
+body {
+  font-family: 'Open Sans', serif;
+  font-size: 1.6rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', serif;
+}
+
+/************************/
+/**** CLASSES ****/
+/************************/
+.main-bg {
+  background-image: url('../img/main-bg.svg');
+  background-size: cover;
+  background-position: center center;
+  color: var(--white-color);
+}
+.white-bg {
+  background-color: var(--white-color);
+}
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--gap);
+}
+.section {
+  min-height: 100vh;
+}
